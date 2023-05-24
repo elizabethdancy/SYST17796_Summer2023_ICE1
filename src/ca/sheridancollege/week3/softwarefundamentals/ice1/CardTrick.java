@@ -29,8 +29,7 @@ public class CardTrick {
             c.setValue(rand.nextInt(13)+1);
             c.setSuit(Card.SUITS[(rand.nextInt(3))+1]);
             magicHand[i]= c;
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            
         }
         
         
