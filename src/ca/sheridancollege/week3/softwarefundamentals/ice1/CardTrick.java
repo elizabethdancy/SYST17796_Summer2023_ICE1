@@ -11,22 +11,45 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
  */
+import java.util.Scanner;
+
 public class CardTrick {
-    
-    public static void main(String[] args)
-    {
-        Card[] magicHand = new Card[7];
-        
-        for (int i=0; i<magicHand.length; i++)
-        {
-            Card c = new Card();
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+    public static final int NUM_CARDS = 7;
+    public static final int MAX_CARD_VALUE = 13;
+    public static final int NUM_CARD_SUITS = 4;
+
+    public static void main(String[] args) {
+        Card[] magicHand = new Card[NUM_CARDS];
+
+        for (int i = 0; i < magicHand.length; i++) {
+            Card yourCard = new Card();
+            yourCard.setValue((int) (Math.random() * MAX_CARD_VALUE) + 1);
+            yourCard.setSuit(Card.SUITS[(int) (Math.random() * NUM_CARD_SUITS)]);
+            magicHand[i] = yourCard;
         }
-        
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the value of your card: ");
+        int value = scanner.nextInt();
+        System.out.print("Enter the suit of your card (0-3): ");
+        int suit = scanner.nextInt();
+        Card userCard = new Card();
+        userCard.setValue(value);
+        userCard.setSuit(Card.SUITS[suit]);
+
+        boolean youGotIt = false;
+        for (Card card : magicHand) {
+            if (card.getValue() == userCard.getValue() && card.getSuit().equals(userCard.getSuit())) {
+               youGotIt = true;
+                break;
+            }
+        }
+
+        if (youGotIt) {
+            System.out.println("Your card is in the magic hand!lesssgooooooo");
+        } else {
+            System.out.println("Your card is not in the magic hand.Sorryyy");
+        }
     }
-    
 }
+
