@@ -51,9 +51,7 @@ public class CardTrick {
             System.out.println("Your card is in the Magic Hand: ");
         if (flag== false) 
             System.out.println("Your card is not in the Magic Hand: ");
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
+       
     }
     
 }
