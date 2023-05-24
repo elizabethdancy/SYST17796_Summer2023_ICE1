@@ -19,7 +19,6 @@ public class CardTrick {
 
     public static void main(String[] args) {
         Random rand = new Random();
-        Scanner sc = new Scanner(System.in);
         Card[] magicHand = new Card[7];
 
         for (int i = 0; i < magicHand.length; i++) {
@@ -33,14 +32,10 @@ public class CardTrick {
             magicHand[i] = c;
         }
         // insert code to ask the user for Card value and suit, create their card
-        System.out.println("Enter card value (1-13):");
-        int number = sc.nextInt();
-        System.out.println("Enter card suit number (0-3):");
-        int suit = sc.nextInt();
 
         Card userCard = new Card();
-        userCard.setValue(number);
-        userCard.setSuit(Card.SUITS[suit]);
+        userCard.setValue(8);
+        userCard.setSuit(Card.SUITS[2]);
 
         // and search magicHand here
         boolean found = false;
