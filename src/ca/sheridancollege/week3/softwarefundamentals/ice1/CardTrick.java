@@ -33,7 +33,7 @@ public class CardTrick {
         int luckyValue = 7;
         String luckySuit = "Hearts";
         luckyCard.setValue(luckyValue);
-        lucky.setSuit(luckySuit);
+        luckyCard.setSuit(luckySuit);
         
         boolean existsInMagicHand = false;
         
