@@ -19,16 +19,14 @@ public class CardTrick {
     {
         Card[] magicHand = new Card[7];
         
-        for(int i=0; i<magicHand.length; i++)
+        for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
-            //c.setValue(insert call to random number generator here)
-             c.setValue(c.randomGenerator(1 , 13));
-             
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-            c.setSuit(c.randomGenerator(0,2));
+            c.setValue((int)(Math.random()* (1+12) ) + 1);
+            c.setSuit((int)(Math.random() *4) );
+            magicHand[i] = c;
             
-            magicHand[i]=c;
+            System.out.println(magicHand[i].getValue() + " " + magicHand[i].getSuit() ); //Print magic hand
         }
         
         //insert code to ask the user for Card value and suit, create their card
