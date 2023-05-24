@@ -25,9 +25,12 @@ public class CardTrick {
             c.setSuit(Card.SUITS[random.nextInt(4)]);
             magicHand[i]=c;
         }
+        //created the (hard-coded) luckyCard object
         Card luckyCard = new Card();
         luckyCard.setValue(7);
         luckyCard.setSuit("Spade");
+     
+     
         boolean found =false;
         for(int i=0; i<magicHand.length;i++){
             Card card = magicHand[i];
@@ -36,13 +39,14 @@ public class CardTrick {
                 break;
             }
         }
-        if (found){
+       
+            //c.setValue(insert call to random number generator here)
+            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+         if (found){
             System.out.println("you found the lucky card");
         }else{
             System.out.println("lucky card is not in the magic hand");
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-        }
+         }
         
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
