@@ -29,46 +29,16 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
-        Card userCard = new Card();       
-        int userValue = 0;
-        int userSuit = 0;
-        
-        boolean repeat = true;
-        while(repeat){
-            try{
-                System.out.print("Enter the value of your card: ");
-                userValue = sc.nextInt();
-                if(userValue <= 0 || userValue > 13){
-                    throw new Exception("Value should be between 1 and 13");
-                }
-                repeat = false;
-            }catch(Exception e){
-                System.out.println(e);
-                sc.nextLine();
-            }
-        }
-        
-        repeat = true;
-        while(repeat){
-            try{
-                System.out.print("Enter your suit(0 = Hearts, 1 = Diamonds, 2 = Spades, 3 = Clubs): ");
-                userSuit = sc.nextInt();
-                if(userSuit < 0 || userSuit > 3 ){
-                    throw new Exception("Not a valid selection");
-                }
-                repeat = false;
-            }catch(Exception e){
-                System.out.println(e);
-                sc.nextLine();
-            }
-        }      
-        userCard.setValue(userValue);
-        userCard.setSuit(Card.SUITS[userSuit]);
+        Card luckyCard = new Card();       
+        int luckyValue = 7;
+        String luckySuit = "Hearts";
+        luckyCard.setValue(luckyValue);
+        lucky.setSuit(luckySuit);
         
         boolean existsInMagicHand = false;
         
         for(Card i: magicHand){
-            if(userCard.getValue() == i.getValue() && userCard.getSuit().equals(i.getSuit())){
+            if(luckyCard.getValue() == i.getValue() && luckyCard.getSuit().equals(i.getSuit())){
                 existsInMagicHand = true;
                 break;
             }
