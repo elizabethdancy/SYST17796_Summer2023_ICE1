@@ -30,7 +30,12 @@ public class CardTrick {
             //System.out.println(magicHand[i].getValue() + " " + magicHand[i].getSuit() ); //Print magic hand
         }
         
-        //insert code to ask the user for Card value and suit, create their card
+        //insert new Card object, luckyCard with a suit and value
+        Card[] = luckyCard = new Card();
+        luckyCard.setValue(2);
+        luckyCard.setSuit(Card.SUITS[1]);
+        
+        //insert new Card object, luckyCard with a static suit and value
         System.out.println("Choose any card, enter its suit (Hearts, Clubs, Diamonds, Spades):");
         String userSuit = input.nextLine();
         System.out.println("Now enter its value(1~13) :");
