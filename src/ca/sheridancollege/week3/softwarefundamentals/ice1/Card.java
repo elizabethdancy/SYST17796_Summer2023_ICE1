@@ -47,7 +47,10 @@ public class Card {
     public void setValue(int value) {
         this.value = value;
     }
-   
+    
+    public boolean equals(Card different){
+        return this.value==different.getValue() && this.suit.equals(different.getSuit());
+    }
    
     
 }
