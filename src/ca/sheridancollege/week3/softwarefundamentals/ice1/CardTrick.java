@@ -31,20 +31,26 @@ public class CardTrick {
             magicHand[i] = yourCard;
         }
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the value of your card: ");
-        int value = scanner.nextInt();
-        System.out.print("Enter the suit of your card (0-3): ");
-        int suit = scanner.nextInt();
-        Card userCard = new Card();
-        userCard.setValue(value);
-        userCard.setSuit(Card.SUITS[suit]);
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Enter the value of your card: ");
+//        int value = scanner.nextInt();
+//        System.out.print("Enter the suit of your card (0-3): ");
+//        int suit = scanner.nextInt();
+//        Card userCard = new Card();
+//        userCard.setValue(value);
+//        userCard.setSuit(Card.SUITS[suit]);
+ Card luckyCard=new Card();
+     luckyCard.setValue(10);
+    luckyCard.setSuit("Spades");
 
         boolean youGotIt = false;
-        for (Card card : magicHand) {
-            if (card.getValue() == userCard.getValue() && card.getSuit().equals(userCard.getSuit())) {
-               youGotIt = true;
-                break;
+         for (int i=0; i<magicHand.length; i++) {
+             if (magicHand[i].equals(luckyCard) ) {
+                youGotIt = true;
+                 break;
+       // for (Card card : magicHand) {
+            //if (card.getValue() == userCard.getValue() && card.getSuit().equals(userCard.getSuit())) {
+              
             }
         }
 
