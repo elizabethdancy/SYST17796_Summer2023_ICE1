@@ -33,16 +33,16 @@ public class CardTrick {
         
         //insert code to ask the user for Card value and suit, create their card
         
-        Card c1 = new Card();
-        c1.setValue(1);
-        c1.setSuit(2);
+        Card luckyCard = new Card();
+        luckyCard.setValue(1);
+        luckyCard.setSuit(2);
         
         // and search magicHand here
         //Then report the result here
         int x = 0;
         for(int i=0; i<magicHand.length; i++)
         {
-            if(magicHand[i].equals(c1))
+            if(magicHand[i].equals(luckyCard))
             {
                 System.out.println("This Card is present in the hand" );
                 x = 1;
