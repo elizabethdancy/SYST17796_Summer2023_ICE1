@@ -13,8 +13,17 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * This code is to be used in ICE1. When you create your own branch,
  * add your name as a modifier.
  * @author dancye
+ * @modifier Azadveer Singh
  */
 public class Card {
+    
+    public Card(){}
+    
+    public Card(int v , String s){
+       value = v;
+       suit = s;
+  
+    }
 
    private String suit; //clubs, spades, diamonds, hearts
    private int value;//1-13
