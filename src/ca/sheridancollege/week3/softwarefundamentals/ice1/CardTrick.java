@@ -10,12 +10,16 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
+ * @modified darsh vakil
  */
 public class CardTrick {
     
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
+        Card luckyCard = new Card();
+        luckyCard.setValue(4); // Set the card number of your choice
+        luckyCard.setSuit("Spade"); // Set the suit of your choice
         
         for (int i=0; i<magicHand.length; i++)
         {
