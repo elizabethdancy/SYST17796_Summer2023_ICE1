@@ -1,5 +1,6 @@
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
 
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -7,56 +8,47 @@ import java.util.Scanner;
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
- * @modifier ajay jesa odedara
+ * @modifier ajay jesa odedara ID - 991700418
  */
 public class CardTrick {
 
     public static void main(String[] args) {
         Card[] magicHand = new Card[7];
-        
+        Random random = new Random();
+
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
-            c.setValue(generateRandomNumber(1, 13));
-            c.setSuit(Card.SUITS[generateRandomNumber(0, 3)]);
+            c.setValue(random.nextInt(13) + 1);
+            c.setSuit(Card.SUITS[random.nextInt(4)]);
             magicHand[i] = c;
         }
-        
+
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter the value of the card (1-13):");
-        int userValue = input.nextInt();
-        
+
+        System.out.println("Enter the value of your lucky card (1-13):");
+        int luckyValue = input.nextInt();
+
         input.nextLine(); // Consume the newline character
-        
-        System.out.println("Enter the suit of the card (Hearts, Diamonds, Spades, Clubs):");
-        String userSuit = input.nextLine();
-        
-        Card userCard = new Card();
-        userCard.setValue(userValue);
-        userCard.setSuit(userSuit);
-        
+
+        System.out.println("Enter the suit of your lucky card (Hearts, Diamonds, Spades, Clubs):");
+        String luckySuit = input.nextLine();
+
+        Card luckyCard = new Card();
+        luckyCard.setValue(luckyValue);
+        luckyCard.setSuit(luckySuit);
+
         boolean found = false;
-        
         for (Card card : magicHand) {
-            if (card.getValue() == userCard.getValue() && card.getSuit().equalsIgnoreCase(userCard.getSuit())) {
+            if (card.getValue() == luckyCard.getValue() && card.getSuit().equalsIgnoreCase(luckyCard.getSuit())) {
                 found = true;
                 break;
             }
         }
-        
+
         if (found) {
-            System.out.println("Your card is in the magic hand!");
+            System.out.println("Your lucky card is in the magic hand!");
         } else {
-            System.out.println("Your card is not in the magic hand.");
+            System.out.println("Your lucky card is not in the magic hand.");
         }
-    }
-    
-    /**
-     * Generates a random number between the specified range.
-     * @param min the minimum value (inclusive)
-     * @param max the maximum value (inclusive)
-     * @return the random number generated
-     */
-    private static int generateRandomNumber(int min, int max) {
-        return min + (int) (Math.random() * ((max - min) + 1));
     }
 }
