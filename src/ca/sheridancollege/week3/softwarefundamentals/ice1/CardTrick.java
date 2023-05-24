@@ -10,6 +10,8 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
+ * @ModifiedBy Manpreet Kaur
+ * Student ID: 991680973
  */
 public class CardTrick {
     
@@ -17,16 +19,43 @@ public class CardTrick {
     {
         Card[] magicHand = new Card[7];
         
-        for (int i=0; i<magicHand.length; i++)
+        for(int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
             //c.setValue(insert call to random number generator here)
+             c.setValue(c.randomGenerator(1 , 13));
+             
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            c.setSuit(c.randomGenerator(0,2));
+            
+            magicHand[i]=c;
         }
         
         //insert code to ask the user for Card value and suit, create their card
+        
+        Card c1 = new Card();
+        c1.setValue(1);
+        c1.setSuit(2);
+        
         // and search magicHand here
         //Then report the result here
+        int x = 0;
+        for(int i=0; i<magicHand.length; i++)
+        {
+            if(magicHand[i].equals(c1))
+            {
+                System.out.println("This Card is present in the hand" );
+                x = 1;
+                break;
+            }
+            
+        }
+        if( x == 0)
+        {
+            System.out.println("This Card is not present in the Hand");
+        }
+        
+        
     }
     
 }
