@@ -28,7 +28,7 @@ public class CardTrick {
         //created the (hard-coded) luckyCard object
         Card luckyCard = new Card();
         luckyCard.setValue(7);
-        luckyCard.setSuit("Spade");
+        luckyCard.setSuit("Spades");
      
      
         boolean found =false;
