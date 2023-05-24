@@ -8,9 +8,9 @@ import java.util.*;
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
  * and then asks the user to pick a card and searches the array of cards
- * for the match to the user's card. To be used as starting code in ICE 1
+ * for the match to the user' carrd. To be used as starting code in ICE 1
  * @author dancye
- * @modifier Jaskaran Sharma Punj ID:991683211 */
+ * @modifier  Jaskaran Sharma Punj ID:991683211 */
 
 public class CardTrick {
     
