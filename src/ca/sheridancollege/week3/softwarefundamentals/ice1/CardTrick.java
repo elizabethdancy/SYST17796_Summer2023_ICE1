@@ -47,6 +47,7 @@ public class CardTrick {
         }else{
             System.out.println("lucky card is not in the magic hand");
          }
+         //Yes the code is working. 
         
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
