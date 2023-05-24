@@ -27,7 +27,7 @@ public class CardTrick {
             c.setValue((int)(Math.random()* (1+12) ) + 1);
             c.setSuit(Card.SUITS[(int)(Math.random() *4)] );
             magicHand[i] = c;
-            //System.out.println(magicHand[i].getValue() + " " + magicHand[i].getSuit() ); //Print magic hand
+            System.out.println(magicHand[i].getValue() + " " + magicHand[i].getSuit() ); //Print magic hand
         }
         
         //insert new Card object, luckyCard with a suit and value
