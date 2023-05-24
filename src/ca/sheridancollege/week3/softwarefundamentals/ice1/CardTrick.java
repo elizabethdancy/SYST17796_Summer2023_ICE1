@@ -36,6 +36,11 @@ public class CardTrick {
         Card luckyCard = new Card();
         luckyCard.setValue(luckyValue);
         luckyCard.setSuit(luckySuit);
+        
+         // Hard-coded lucky card
+        Card hardcodedLuckyCard = new Card();
+        hardcodedLuckyCard.setValue(7); // Choose any card number you desire
+        hardcodedLuckyCard.setSuit("Diamonds"); // Choose any suit you desire
 
         boolean found = false;
         for (Card card : magicHand) {
