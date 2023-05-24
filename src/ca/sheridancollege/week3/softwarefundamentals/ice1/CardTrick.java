@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
-import java.util.Scanner;
+
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
- * @modified by Arshvir Singh (Student id: 991709700)
+ * @modified by Arshvir Singh (Student id: 991709700) on May 24
  */
 public class CardTrick {
     
