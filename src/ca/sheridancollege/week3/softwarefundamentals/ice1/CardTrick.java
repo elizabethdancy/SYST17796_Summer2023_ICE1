@@ -4,14 +4,14 @@
  * and open the template in the editor.
  */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
-import java.util.Scanner;
+
 import java.util.Random;
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
- * @modified B Gaurav yadav
+ * @modified By Gaurav yadav
  */
 public class CardTrick {
     
@@ -34,15 +34,13 @@ public class CardTrick {
         randomSuit = rand.nextInt(4);
         }
         
-        Scanner scan = new Scanner(System.in);  
-        System.out.println("Enter card value");
-        int userValue = scan.nextInt();
-        System.out.println("Enter suit you want to pick up");
-        int userSuitIndex = scan.nextInt();
+         
+       
+        
         
         Card userCard = new Card();
-        userCard.setValue(userValue);
-        userCard.setSuit(Card.SUITS[userSuitIndex]);
+        userCard.setValue(5);
+        userCard.setSuit("Spades");
         
         
         boolean found = false;
