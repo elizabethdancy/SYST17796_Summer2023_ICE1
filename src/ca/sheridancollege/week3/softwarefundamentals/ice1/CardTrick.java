@@ -16,7 +16,7 @@ public class CardTrick {
     
     public static void main(String[] args)
     {
-        Scanner input = new Scanner(System.in);
+       
         
         Card[] magicHand = new Card[7];
         Random rand = new Random();
@@ -30,17 +30,18 @@ public class CardTrick {
             c.setValue(rand.nextInt(13)+1);
             c.setSuit(Card.SUITS[(rand.nextInt(3))+1]);
             magicHand[i]= c;
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            
         }
-        System.out.println(" Please Choose Card(1 13) : ");
-        int userCard = input.nextInt();
-        System.out.println("Please Choose Suit 1:Heart 2:Spade 3:Diamonds 4:Clubs  ");
-        int userSuit = input.nextInt();
+
+        Card luckyCard = new Card();
+        luckyCard.setValue(10);
+        luckyCard.setSuit("Hearts");
+        
+        
         
         boolean flag = false;
         for (int i=0; i<magicHand.length; i++) {
-            if ( userCard== magicHand[i].getValue() && Card.SUITS[userSuit].equals(magicHand[i].getSuit()) ) {
+            if ( luckyCard.getValue() == magicHand[i].getValue() && luckyCard.getSuit().equals(magicHand[i].getSuit()) ) {
                     flag=true;
                     break;
                     }
