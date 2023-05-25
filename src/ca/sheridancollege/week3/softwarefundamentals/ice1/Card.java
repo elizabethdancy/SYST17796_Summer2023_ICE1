@@ -24,6 +24,13 @@ public class Card {
   /*
      * @return the suit
      */
+    public Card(){
+
+    }
+    public Card(int value, String suit){
+        this.value= value;
+        this.suit = suit;
+    }
     public String getSuit() {
         return suit;
     }
@@ -47,6 +54,11 @@ public class Card {
      */
     public void setValue(int value) {
         this.value = value;
+    }
+   public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Card card)) return false;
+        return getValue() == card.getValue() && getSuit().equals(card.getSuit());
     }
     public String toString() {
         return
