@@ -1,4 +1,5 @@
 /*
+* this code is modified by Prabhjot Singh Thiara student ID:991721685
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -20,7 +21,7 @@ public class Card {
    private int value;//1-13
 
    public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
-    /**
+  /*
      * @return the suit
      */
     public String getSuit() {
@@ -47,7 +48,10 @@ public class Card {
     public void setValue(int value) {
         this.value = value;
     }
-   
+    public String toString() {
+        return
+                suit + value;
+    }
    
     
 }
