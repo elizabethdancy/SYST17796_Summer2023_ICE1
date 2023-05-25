@@ -14,7 +14,6 @@ import java.util.Scanner;
  * Student Name: Princekumar Rajput
  * Student Number: 991698363
  * Date Modified: 24th May, 2023
- *
  */
 public class CardTrick {
 
