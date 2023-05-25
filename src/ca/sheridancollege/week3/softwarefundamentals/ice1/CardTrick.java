@@ -77,8 +77,7 @@ public class CardTrick {
     
 
   
-
-        }
-        }    
+ }
+          
     
 
