@@ -33,29 +33,29 @@ public class CardTrick {
         }
         
         //insert code to ask the user for Card value and suit, create their card
-         Scanner sc = new Scanner(System.in);
-         System.out.println("Enter the value for the Card and Suit with s after every suit");
-         String cardValueAndSuit = sc.nextLine();
-         cardValueAndSuit = cardValueAndSuit.replace(" ", "");
+//          Scanner sc = new Scanner(System.in);
+//          System.out.println("Enter the value for the Card and Suit with s after every suit");
+//          String cardValueAndSuit = sc.nextLine();
+//          cardValueAndSuit = cardValueAndSuit.replace(" ", "");
         // System.out.println(cardValueAndSuit);
  
         // and search magicHand here
-        boolean found = false;
-        for (int i = 0; i < magicHand.length; i++) {
-            if (cardValueAndSuit.equalsIgnoreCase(magicHand[i].getValue() + magicHand[i].getSuit())) {
-               found = true;
-               break;
-            }
+//         boolean found = false;
+//         for (int i = 0; i < magicHand.length; i++) {
+//             if (cardValueAndSuit.equalsIgnoreCase(magicHand[i].getValue() + magicHand[i].getSuit())) {
+//                found = true;
+//                break;
+//             }
       
-      }  
+//       }  
         //Then report the result here
-        if(found){
-            System.out.println("Yea! your card is found in our Magic Hand");
-        }
-        else{
-            System.out.println("Nope! your card is found in our Magic Hand");
+//         if(found){
+//             System.out.println("Yea! your card is found in our Magic Hand");
+//         }
+//         else{
+//             System.out.println("Nope! your card is found in our Magic Hand");
    
-        }
+//         }
             // new hard coded object 
             boolean isFound = false;
             for (int i =0; i<magicHand.length;i++){
