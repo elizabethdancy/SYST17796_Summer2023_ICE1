@@ -63,7 +63,8 @@ public class CardTrick {
                  isFound = true;
                    break;
         }
-                 if(isFound){
+            }
+                if(isFound){
             System.out.println("Yea! your card is found in our Magic Hand");
         }
         else{
@@ -80,4 +81,4 @@ public class CardTrick {
         }
         }    
     
-}
+
