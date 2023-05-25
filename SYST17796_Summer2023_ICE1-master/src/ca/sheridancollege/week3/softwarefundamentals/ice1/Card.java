@@ -72,4 +72,11 @@ public class Card {
         return SUITS[index];
     }
 
+    // Create a hard-coded lucky card
+    public static Card createLuckyCard() {
+        Card luckyCard = new Card();
+        luckyCard.setValue(7);
+        luckyCard.setSuit("Spades");
+        return luckyCard;
+    }
 }
