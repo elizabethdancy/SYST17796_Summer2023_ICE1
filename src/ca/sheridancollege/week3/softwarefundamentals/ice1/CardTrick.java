@@ -31,15 +31,18 @@ public class CardTrick {
             c.setSuit(Card.SUITS[((int)(Math.random()*3+1))]);
             magicHand[i]=c;
         }
-        
-        //insert code to ask the user for Card value and suit, create their card
+       // first code which was asking user to enter the value 
+       
+       
+
+//insert code to ask the user for Card value and suit, create their card
 //          Scanner sc = new Scanner(System.in);
 //          System.out.println("Enter the value for the Card and Suit with s after every suit");
 //          String cardValueAndSuit = sc.nextLine();
 //          cardValueAndSuit = cardValueAndSuit.replace(" ", "");
-        // System.out.println(cardValueAndSuit);
+//             System.out.println(cardValueAndSuit);
  
-        // and search magicHand here
+        //  and search magicHand here
 //         boolean found = false;
 //         for (int i = 0; i < magicHand.length; i++) {
 //             if (cardValueAndSuit.equalsIgnoreCase(magicHand[i].getValue() + magicHand[i].getSuit())) {
@@ -56,6 +59,10 @@ public class CardTrick {
 //             System.out.println("Nope! your card is found in our Magic Hand");
    
 //         }
+
+
+
+
             // new hard coded object 
             boolean isFound = false;
             for (int i =0; i<magicHand.length;i++){
