@@ -15,8 +15,6 @@ import java.util.Scanner;
  * Student Number: 991698363
  * Date Modified: 24th May, 2023
  *
- * Modified by [Your Name]
- * Student Number: [Your Student Number]
  */
 public class CardTrick {
 
