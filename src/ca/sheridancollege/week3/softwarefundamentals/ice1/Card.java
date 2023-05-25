@@ -58,9 +58,7 @@ public class Card {
     }
     
     public boolean equals(Card c){
-        if(this.value = c.value && this.suit==c.suit){
-            return true;
-            else return false;
+       return ((this.value == c.value) && (this.suit.equals(c.getSuit())));
     
     }
     
