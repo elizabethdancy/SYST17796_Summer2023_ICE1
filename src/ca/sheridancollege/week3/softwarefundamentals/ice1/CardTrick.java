@@ -39,7 +39,7 @@ public class CardTrick {
         int result = -1;
         for (int i=0; i<magicHand.length; i++){
             
-            if (magicHand[i]==c1){
+            if (magicHand[i].equals(c1)){
                 result=0;
             }   
         }
