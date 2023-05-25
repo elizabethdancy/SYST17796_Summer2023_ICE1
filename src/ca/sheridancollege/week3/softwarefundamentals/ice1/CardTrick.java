@@ -37,7 +37,10 @@ public class CardTrick {
         Card userCard = new Card();
         userCard.setValue(value);
         userCard.setSuit(Card.SUITS[suit]);
-        
+        Card hardcodedLuckyCard = new Card();
+        hardcodedLuckyCard.setValue(7); 
+        hardcodedLuckyCard.setSuit("Diamonds");
+      
         boolean found = false;
         for (Card card : magicHand) {
             if (card.equals(userCard)) {
