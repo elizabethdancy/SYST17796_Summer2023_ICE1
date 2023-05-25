@@ -17,6 +17,9 @@ public class CardTrick {
     
     public static void main(String[] args)
     {
+        Card c2 = new Card(2, "Hearts");
+        Card c1 = new Card(){
+            
         Card[] magicHand = new Card[7];
         
         for (int i=0; i<magicHand.length; i++)
@@ -44,7 +47,7 @@ public class CardTrick {
                break;
             }
       
-      }
+      }  
         //Then report the result here
         if(found){
             System.out.println("Yea! your card is found in our Magic Hand");
@@ -53,6 +56,22 @@ public class CardTrick {
             System.out.println("Nope! your card is found in our Magic Hand");
    
         }
+            // new hard coded object 
+            boolean isFound = false;
+            for (int i =0; i<magicHand.length;i++){
+               if (c2.equals(magicHand[i])) {
+                 isFound = true;
+                   break;
+        }
+                 if(isFound){
+            System.out.println("Yea! your card is found in our Magic Hand");
+        }
+        else{
+            System.out.println("Nope! your card is found in our Magic Hand");
+   
+        }
+                
+            
     }
     
 
