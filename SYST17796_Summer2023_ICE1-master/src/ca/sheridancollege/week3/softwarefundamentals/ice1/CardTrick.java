@@ -57,24 +57,5 @@ public class CardTrick {
         } else {
             System.out.println("Sorry! Your card is not in the magic hand.");
         }
-
-        // Create the lucky card
-        Card luckyCard = Card.createLuckyCard();
-
-        // Search magicHand for the lucky card
-        found = false;
-        for (Card card : magicHand) {
-            if (card.getValue() == luckyCard.getValue() && card.getSuit().equalsIgnoreCase(luckyCard.getSuit())) {
-                found = true;
-                break;
-            }
-        }
-
-        // Report the result for the lucky card search
-        if (found) {
-            System.out.println("Congratulations! The lucky card is in the magic hand.");
-        } else {
-            System.out.println("Sorry! The lucky card is not in the magic hand.");
-        }
     }
 }

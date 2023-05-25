@@ -71,11 +71,5 @@ public class Card {
         int index = (int) (Math.random() * 4);
         return SUITS[index];
     }
-    // Create a hard-coded lucky card
-    public static Card createLuckyCard() {
-        Card luckyCard = new Card();
-        luckyCard.setValue(13);
-        luckyCard.setSuit("diamonds");
-        return luckyCard;
-    }
+
 }
