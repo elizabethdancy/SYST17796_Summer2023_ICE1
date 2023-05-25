@@ -56,6 +56,15 @@ public class Card {
     public void setValue(int value) {
         this.value = value;
     }
+    
+    public boolean equals(Card c){
+        if(this.value = c.value && this.suit==c.suit){
+            return true;
+            else return false;
+    
+    }
+    
+        
    
    
     
