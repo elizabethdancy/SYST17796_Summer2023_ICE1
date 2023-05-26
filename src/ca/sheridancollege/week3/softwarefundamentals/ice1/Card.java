@@ -15,7 +15,8 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * @author dancye
  */
 public class Card {
-
+private Card[] magicHand;
+    
    private String suit; //clubs, spades, diamonds, hearts
    private int value;//1-13
 
@@ -46,6 +47,25 @@ public class Card {
      */
     public void setValue(int value) {
         this.value = value;
+        
+    /**
+     *
+     * @param userCard
+     */
+     public void search(Card userCard){
+        boolean found = false;
+        for (Card card : magicHand){
+            if(card.equals(userCard)){
+                found = true;
+                break;
+            }
+        }
+        
+        if (found) {
+            System.out.println("Congratulations! Your card is in the magic hand.");
+        } else {
+            System.out.println("Sorry, Your card is not in the magic hand.");
+        }
     }
    
    
